@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mi primera pagina web</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <img src="/img/landscape-placeholder.svg" alt="sello" />
+                    </li>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Planes</a></li>
+                    <li><a href="#">Contactanos</a></li>
+                    <li><a href="#">Programas</a></li>
+                    <ul>
+                        <li>
+                            <a href="#">Ingenieria en sistemas</a>
+                            <img
+                                src="/img/AcreditaciónUnillanos_sello.png"
+                                alt="imagen"
+                            />
+                        </li>
+                    </ul>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 
+        --------------------------------------------------------------------------------------------------------------------
+        ----------------------------------------- Tabla de estudiantes y docentes -----------------------------------------
+        --------------------------------------------------------------------------------------------------------------------
+        -->
+        <hr />
+
+        <table>
+            <thead>
+                <th>Total estudiantes</th>
+                <th>Total docentes</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>620</td>
+                    <td>41</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr />
+
+        <!-- 
+        --------------------------------------------------------------------------------------------------------------------
+        -------------------------------------------------- Tabla de roles --------------------------------------------------
+        --------------------------------------------------------------------------------------------------------------------
+        -->
+        <table id="userTable">
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rol</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>id 1</td>
+                    <td>nombre 1</td>
+                    <td>email@email.com</td>
+                    <td>rol 1</td>
+                </tr>
+                <tr>
+                    <td>id 2</td>
+                    <td>nombre 2</td>
+                    <td>email@email.com</td>
+                    <td>rol 2</td>
+                </tr>
+                <tr>
+                    <td>id 3</td>
+                    <td>nombre 3</td>
+                    <td>email@email.com</td>
+                    <td>rol 3</td>
+                </tr>
+                <tr>
+                    <td>id 4</td>
+                    <td>nombre 4</td>
+                    <td>email@email.com</td>
+                    <td>rol 4</td>
+                </tr>
+                <tr>
+                    <td>id 5</td>
+                    <td>nombre 5</td>
+                    <td>email@email.com</td>
+                    <td>rol 5</td>
+                </tr>
+                <tr>
+                    <td>id 6</td>
+                    <td>nombre 6</td>
+                    <td>email@email.com</td>
+                    <td>rol 6</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Este es el footer de la tabla</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <hr />
+
+        <!-- 
+        --------------------------------------------------------------------------------------------------------------------
+        ----------------------------------------- formulario de inscripción basico -----------------------------------------
+        --------------------------------------------------------------------------------------------------------------------
+        -->
+        <form action="/submit" method="post">
+            <div>
+                <label for="fullname">nombre completo:</label>
+                <input type="text" name="fullname" id="fullname" required />
+            </div>
+            <div>
+                <label for="email">email:</label>
+                <input type="email" name="email" id="email" required />
+            </div>
+            <div>
+                <label for="edad">edad:</label>
+                <input
+                    type="number"
+                    name="edad"
+                    id="edad"
+                    required
+                    min="18"
+                    max="99"
+                />
+            </div>
+            <div>
+                <label for="gender">Genero</label>
+                <input type="radio" name="gender" id="gender" value="male" />
+                masculino
+                <input type="radio" name="gender" id="gender" value="female" />
+                femenino
+            </div>
+            <div>
+                <input
+                    type="checkbox"
+                    name="newsletter"
+                    id="newsletter"
+                    value="yes"
+                />
+                <label for="newsletter">Suscribirme al boletín</label>
+            </div>
+            <div>
+                <label for="country">Pais:</label>
+                <select name="country" id="country">
+                    <option value="" selected hidden>Seleccione el pais</option>
+                    <option value="es">España</option>
+                    <option value="mx">Mexico</option>
+                    <option value="ar">Argentina</option>
+                </select>
+            </div>
+            <div>
+                <label for="date">Fecha</label>
+                <input type="date" name="date" id="date" />
+            </div>
+            <div>
+                <label for="comment">Comentario:</label>
+                <textarea name="comment" id="comment" rows="3"></textarea>
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+
+        <!-- 
+        --------------------------------------------------------------------------------------------------------------------
+        ------------------------------------------- reproductor de video / audio -------------------------------------------
+        --------------------------------------------------------------------------------------------------------------------
+        -->
+        <main>
+            <div class="media-container">
+                <div class="video-section">
+                    <h2>Reproductor de video</h2>
+
+                    <!-- iframe -->
+                    <!-- <div>
+
+                    </div> -->
+
+                    <!-- video -->
+                    <div>
+                        <video controls width="100%" poster="#">
+                            <source src="/video/" type="video/mp4" />
+                        </video>
+                    </div>
+
+                    <!-- audio -->
+                    <div>
+                        <audio controls>
+                            <source src="/video/" type="audio/mp4" />
+                        </audio>
+                    </div>
+
+                    <!-- mapas -->
+                    <div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.4845478405264!2d-73.3620583259233!3d8.254470900633686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e677b8351a2f887%3A0x38e5feae77661192!2sINVIAS!5e0!3m2!1ses!2sco!4v1729647974870!5m2!1ses!2sco"
+                            width="600"
+                            height="450"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

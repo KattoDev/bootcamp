@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+}
+
+header {
+    nav {
+        ul {
+            gap: 20px;
+            align-items: center;
+        }
+        img {
+            width: 60px;
+        }
+    }
+}
+
+body {
+    table {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-collapse: collapse;
+        
+        td,
+        th {
+            padding: 5px;
+            border: 1px solid black;
+        }
+    }
+}

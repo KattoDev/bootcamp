@@ -1,0 +1,38 @@
+body {
+    font-size: 10px;
+}
+
+div,
+a {
+    display: inline;
+    font-size: 3em;
+}
+
+#text-red {
+    color: red;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+a:link {
+    color: pink;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    cursor: crosshair;
+    text-decoration: line-through;
+}
+
+nav{
+    ul{
+        gap:10px;
+        display: flex;
+        list-style: none;
+    }
+}
