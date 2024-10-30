@@ -1,3 +1,8 @@
+:root {
+    --menu-height: 50px;
+    --background: #eef5db;
+}
+
 html,
 body {
     padding: 0;
@@ -5,7 +10,7 @@ body {
 }
 
 menu {
-    background-color: #EEF5DB;
+    background-color: var(--background);
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,7 +19,8 @@ menu {
     li {
         list-style: none;
         display: inline;
-        height: 50px;
+        height: var(--menu-height);
+        position: relative;
 
         a {
             text-decoration: none;
@@ -23,11 +29,54 @@ menu {
             height: 100%;
             align-items: center;
             padding: 0 10px;
-            transition: background-color .3s ease-in-out;
+            transition: background-color 0.3s ease-in-out;
+
+            svg{
+                width: 20px;
+                rotate: 0deg;
+                transition: rotate .15s ease-in-out;
+            }
         }
 
-        a:hover {
-            background-color: #C7EFCF;
+        a:hover{
+            background-color: #c7efcf;
+
+            svg{
+                rotate: 90deg;
+            }
         }
     }
+}
+
+/* Menu vertical */
+menu.vertical {
+    width: 120px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu {
+    background-color: var(--background);
+    position: absolute;
+    top: calc(var(--menu-height) - 50px);
+    padding: 0;
+    opacity: 0;
+    width: 100%;
+    pointer-events: none;
+
+    /* animaciones */
+    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    li a{
+        height: var(--menu-height);
+        align-items: center;
+    }
+}
+
+/* mostrar el submenu al estar sobre el topic */
+menu li:hover ul.sub-menu {
+    opacity: 1;
+    pointer-events: all;
+    top: var(--menu-height);
 }
