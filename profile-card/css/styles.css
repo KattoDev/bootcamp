@@ -1,54 +1,156 @@
-.container {
-    background-color: red;
-    border-radius: 20px;
-    max-width: 300px;
+:root {
+    --corner-round: 12px;
+    --shadow-color: gray;
+    --main-color: rgb(192, 137, 199);
+    --image-width: 100px;
+}
 
+* {
+    box-sizing: border-box;
+    font-family: "Itim", cursive;
+}
 
-    #color-container {
-        background-color: aqua;
+html,
+body,
+p,
+ul,
+h3,
+button,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #bebebe;
+    /* Centrar usando flex */
+    display: flex;
+    height: 100dvh; /* dvh => dinamic viewport height */
+    justify-content: center; /* centrar en X */
+    align-items: center; /* centrar en Y */
+    /* ------------------- */
+}
+
+.card {
+    background-color: #fff;
+    width: 300px;
+    border-radius: var(--corner-round);
+    box-shadow: 1px 1px 10px var(--shadow-color);
+    padding-bottom: 20px;
+    /* Centrar en X siendo un bloque */
+    /* margin: auto; */
+
+    text-align: center; /* alinear texto en X */
+    overflow: hidden;
+
+    .color {
         height: 100px;
-        border-radius: 10px 10px 0 0;
+        background-color: var(--main-color);
     }
 
     .image {
+        width: calc(var(--image-width) + 4px);
+        height: calc(var(--image-width) + 4px);
+        background-color: var(--main-color);
+        border-radius: 100%;
+
+        /* Centrar imagen */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* -------------- */
+
+        /* ----- mover imagen ----- */
+        position: relative;
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%);
+        /* ------------------------ */
+
         img {
+            width: var(--image-width);
+            height: var(--image-width);
             border-radius: 100px;
-            border: 5px solid black;
-            width: 150px;
+            background-color: aliceblue;
+            border: 2px solid white;
+        }
+    }
+
+    .info {
+        margin-top: 40px;
+        font-size: 20px;
+        h3{
+            font-weight: bold;
+        }
+        p{
+            font-weight: lighter;
         }
     }
 
     .links {
-        list-style: none;
+        margin-top: 20px;
 
-        display: flex;
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 10px;
 
-        li {
-            border-radius: 20px;
-            max-width: max-content;
-            background-color: #fff;
-            background-color: aquamarine;
-            margin-left: 20px;
-            a {
-                text-decoration: none;
+            li {
+                padding: 5px;
+                border-radius: 100%;
+
+                a {
+                    img {
+                        display: flex;
+                        width: 25px;
+                    }
+                }
             }
         }
     }
 
     .buttons {
-        list-style: none;
-
-        display: flex;
-
-        li {
+        margin-top: 20px;
+        button {
+            font-size: 15px;
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: var(--main-color);
             border-radius: 20px;
-            max-width: max-content;
-            background-color: #fff;
-            background-color: aquamarine;
-            margin-left: 20px;
-            a {
-                text-decoration: none;
+        }
+    }
+    .numbers {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        
+        gap: 20px;
+        div {
+            display: flex;
+            align-items: center;
+
+            svg {
+                width: 20px;
+            }
+
+            p {
+                align-items: center;
             }
         }
     }
+}
+
+.fb {
+    background-color: #007ffc;
+}
+.tw {
+    background-color: rgb(0, 47, 255);
+}
+.ig {
+    background-color: #df316e;
+}
+.yt {
+    background-color: red;
 }
