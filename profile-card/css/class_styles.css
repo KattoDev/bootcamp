@@ -1,0 +1,70 @@
+:root {
+    --corner-round: 12px;
+    --shadow-color: gray;
+    --main-color: rgb(192, 137, 199);
+    --image-width: 100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Centrar usando flex */
+    display: flex;
+    height: 100dvh; /* dvh => dinamic viewport height */
+    justify-content: center; /* centrar en X */
+    align-items: center; /* centrar en Y */
+    /* ------------------- */
+}
+
+.card {
+    width: 300px;
+    border-radius: var(--corner-round);
+    box-shadow: 1px 1px 10px var(--shadow-color);
+    padding-bottom: 20px;
+    /* Centrar en X siendo un bloque */
+    /* margin: auto; */
+
+    text-align: center; /* alinear texto en X */
+    overflow: hidden;
+
+    .color {
+        height: 100px;
+        background-color: var(--main-color);
+    }
+
+    .image {
+        width: calc(var(--image-width) + 4px);
+        height: calc(var(--image-width) + 4px);
+        background-color: var(--main-color);
+        border-radius: 100%;
+
+        /* Centrar imagen */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* -------------- */
+        
+        /* ----- mover imagen ----- */
+        position: relative;
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%);
+        /* ------------------------ */
+
+        img {
+            width: var(--image-width);
+            border-radius: 100px;
+            background-color: aliceblue;
+            border: 2px solid white;
+        }
+    }
+}
