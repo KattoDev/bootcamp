@@ -1,0 +1,64 @@
+:root {
+    --dark-moss-green: #606c38ff;
+    --pakistan-green: #283618ff;
+    --cornsilk: #fefae0ff;
+    --earth-yellow: #dda15eff;
+    --tigers-eye: #bc6c25ff;
+}
+
+html {
+    background-color: var(--cornsilk);
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+    margin: 0 auto;
+    color: var(--earth-yellow);
+    font-family: sans-serif;
+    background-color: var(--dark-moss-green);
+    padding-bottom: 9px;
+    position: relative;
+}
+
+table thead {
+    position: sticky;
+    top: 0;
+    background-color: var(--pakistan-green);
+}
+
+table thead tr th {
+    padding: 24px 0 24px 24px;
+    text-align: start;
+}
+
+ /* odd para par y even para impar */
+table tbody tr:nth-child(even) {
+    background-color: var(--pakistan-green);
+}
+
+table tbody tr td {
+    padding: 12px 24px;
+}
+
+table tbody tr {
+    transition: background-color 0.1s ease-in-out;
+}
+table tbody tr:hover {
+    background-color: var(--tigers-eye);
+}
+
+table tbody tr td button {
+    border: none;
+    background-color: var(--cornsilk);
+    border-radius: 2px;
+    color: var(--earth-yellow);
+}
+
+table tfoot {
+    text-align: center;
+}
+
+table tfoot td {
+    padding-top: 9px;
+}
