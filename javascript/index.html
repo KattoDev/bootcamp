@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Javascript</title>
-    </head>
-    <body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Javascript</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div>
+			<h1>Mi lista de tareas</h1>
+			<div class="task-container">
+				<div>
+					<h3>Titulo</h3>
+					<div class="buttons-container">
+						<input type="checkbox" name="task-done" id="task-done" />
+						<button>Eliminar</button>
+					</div>
+				</div>
+				<div>
+					<h3>Titulo</h3>
+					<div class="buttons-container">
+						<input type="checkbox" name="task-done" id="task-done" />
+						<button>Eliminar</button>
+					</div>
+				</div>
+				<div>
+					<h3>Titulo</h3>
+					<div class="buttons-container">
+						<input type="checkbox" name="task-done" id="task-done" />
+						<button>Eliminar</button>
+					</div>
+				</div>
+			</div>
 
-        <script src="/main.js"></script>
-    </body>
+			<div>
+				<form action="#">
+					<input
+						type="text"
+						name="task-name"
+						id="task-name"
+						placeholder="Tarea"
+					/>
+					<button type="submit" id="add-button">Añadir</button>
+				</form>
+			</div>
+		</div>
+
+		<script src="/eventsDOM.js"></script>
+	</body>
 </html>
