@@ -1,0 +1,71 @@
+:root {
+	--text-color: #353b3c;
+	--window-color: #eef0f2;
+	--main-container-color: #c6c7c4;
+	--task-container-color: #a2999e;
+	--button-color: #846a6a;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	height: 100dvh;
+	align-items: center;
+	background-color: var(--window-color);
+	font-family: sans-serif;
+	color: var(--text-color);
+}
+
+body div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 500px;
+	background-color: var(--main-container-color);
+	padding: 25px;
+	border-radius: 10px;
+}
+
+.task-container {
+	gap: 5px;
+}
+
+.task-container div {
+	padding: 10px 0;
+	flex-direction: row;
+	background-color: var(--task-container-color);
+	justify-content: space-between;
+}
+
+.task-container div h3,
+.buttons-container {
+	margin: 0 10px;
+}
+
+.task-container div .buttons-container {
+	width: max-content;
+	color: var(--text-color);
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+form input {
+	width: 300px;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 10px;
+	background-color: var(--window-color);
+	outline: none;
+	color: var(--text-color);
+}
+
+form button,
+.task-container div .buttons-container button {
+	padding: 5px 10px;
+	border: none;
+	border-radius: 10px;
+	background-color: var(--window-color);
+	color: var(--text-color);
+}
